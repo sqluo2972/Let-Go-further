@@ -19,5 +19,7 @@ func (app *application) routes() http.Handler {
 
 	router.HandlerFunc(http.MethodGet, "/v1/movies/:id", app.showMovieHandler)
 
+	router.HandlerFunc(http.MethodPut, "/v1/movies/:id", app.updateMovieHandler)
+
 	return router
 }
