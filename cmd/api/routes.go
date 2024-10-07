@@ -21,5 +21,7 @@ func (app *application) routes() http.Handler {
 
 	router.HandlerFunc(http.MethodPut, "/v1/movies/:id", app.updateMovieHandler)
 
+	router.HandlerFunc(http.MethodDelete, "/v1/movies/:id", app.deleteMovieHandler)
+
 	return router
 }
